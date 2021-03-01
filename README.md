@@ -1,1 +1,1 @@
-# vuePractice
+강의를 들으며 Vue.js 코드 연습
