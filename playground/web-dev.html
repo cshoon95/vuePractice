@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        var div = document.querySelector('#app'); // Jquery Selector와 동일한 역할을 함.
+        console.log(div);
+
+        /**
+        * 아래 방식보다는 변수를 선언해서 변수를 대입함.
+        */
+        div.innerHTML = 'hello world'; // innerHtml == <div>hello world <div>
+
+        var str = 'hello world!!!';
+        div.innerHTML = str;
+        
+    </script>
+</body>
+</html>

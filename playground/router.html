@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <!--뷰를 먼저넣고 그다음 라우터를 넣는다.-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script>
+
+        let LoginComponent = {
+            template: '<div>Login Page</div>'
+        }
+
+        let MainComponent = {
+            template: '<dvi>Main Page</div>'
+        }
+        let router = new VueRouter({
+            // 페이지의 라우팅 정보 (어떤 url로 이동했을 때 어떤 url을 보일지 배열로 남기게 된다.)
+            routes: [
+                // 첫 번째 페이지
+                {       
+                    // 페이지의 url 이릉
+                    path: '/login',
+                    // 해당 url에서 표시될 컴포넌트
+                    component: LoginComponent
+                }, 
+                // 두 번째 페이지
+                {
+                    path: '/',
+                    component: MainComponent
+                }
+            ]
+
+        });
+
+        new Vue({
+            el: '#app',
+            router: router
+        });
+    </script>
+</body>
+</html>
